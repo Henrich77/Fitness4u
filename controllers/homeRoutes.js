@@ -1,6 +1,23 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Workout } = require('../models');
 const withAuth = require('../utils/auth');
+
+router.get('/workouts', async (req, res) => {
+  try {
+    const dbWorkoutData = await Workout.findAll();
+
+    const workouts = dbWorkoutData.map((workout) =>
+      workout.get({ plain: true })
+    );
+    res.render('homepage', {
+      workouts,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 router.get('/', withAuth, async (req, res) => {
   try {
