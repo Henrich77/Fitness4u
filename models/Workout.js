@@ -9,19 +9,27 @@ Workout.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       autoIncrement: true,
+      primaryKey: true,
     },
-    name: {
+    workout_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    
+    // region_id: {
+    //     type: DataTypes.INTEGER,
+    //     references: {
+    //       model: 'region',
+    //       key: 'id',
+    //     },    
+    // },
   },
   {
     sequelize,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'workout',
-  }
+  },
 );
 
 module.exports = Workout;
