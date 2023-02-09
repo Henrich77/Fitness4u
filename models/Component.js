@@ -11,7 +11,7 @@ Component.init(
         autoIncrement: true,
         primaryKey: true,
       },
-      Component_name:{
+      component_name:{
         type: DataTypes.STRING,
         allowNull: false,
       },
