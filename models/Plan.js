@@ -11,6 +11,10 @@ Plan.init(
         autoIncrement: true,
         primaryKey: true,
       },
+      plan_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
       first_workout: {
         type: DataTypes.STRING,
         allowNull: false,

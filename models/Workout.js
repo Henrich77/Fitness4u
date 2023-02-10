@@ -15,12 +15,9 @@ Workout.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    body_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'body',
-          key: 'id',
-        },    
+    region_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {
