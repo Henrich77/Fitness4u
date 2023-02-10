@@ -1,41 +1,54 @@
 [
     {
-        "workout_name": "Lunges"
+        "workout_name": "Lunges",
+        "region_name": "Lower Body"
     },
     {
-        "workout_name": "Pushups"
+        "workout_name": "Pushups",
+        "region_name": "Upper Body"
     },
     {
-        "workout_name": "Squats"
+        "workout_name": "Squats",
+        "region_name": "Lower Body"
     },
     {
-        "workout_name": "Dumbbell Presses"
+        "workout_name": "Dumbbell Press",
+        "region_name": "Upper Body"
     },
     {
-        "workout_name": "Dumbbell Rows"
+        "workout_name": "Dumbbell Rows",
+        "region_name": "Upper Body"
     },
     {
-        "workout_name": "Single-leg Deadlifts"
+        "workout_name": "Single-leg Deadlifts",
+        "region_name": "Lower Body"
     },
     {
-        "workout_name": "Burpees"
+        "workout_name": "Burpees",
+        "region_name": "Full Body"
     },
     {
-        "workout_name": "Side Planks"
+        "workout_name": "Side Planks",
+        "region_name": "Upper Body"
     },
     {
-        "workout_name": "Planks"
+        "workout_name": "Planks",
+        "region_name": "Upper Body"
     },
     {
-        "workout_name": "Lat Pulls"
+        "workout_name": "Lat Pulls",
+        "region_name": "Upper Body"
     },
     {
-        "workout_name": "Bench Press"
+        "workout_name": "Bench Press",
+        "region_name": "Upper Body"
     },
     {
-        "workout_name": "Mile Run"
+        "workout_name": "Mile Run",
+        "region_name": "Full Body"
     },
     {
-        "workout_name": "100m Sprint"
+        "workout_name": "100m Sprint",
+        "region_name": "Full Body"
     }
 ]

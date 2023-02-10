@@ -15,13 +15,10 @@ Workout.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // region_id: {
-    //     type: DataTypes.INTEGER,
-    //     references: {
-    //       model: 'region',
-    //       key: 'id',
-    //     },    
-    // },
+    region_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     sequelize,

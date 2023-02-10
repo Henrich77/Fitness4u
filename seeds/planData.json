@@ -1,0 +1,23 @@
+[
+    {
+    "plan_name": "Power Lower Body",
+    "first_workout": "Lunges",
+    "second_workout": "Squats",
+    "third_workout": "Single-leg Deadlifts",
+    "fourth_workout": "",
+    "fifth_workout": ""
+},
+{
+    "plan_name": "Power Upper Body",
+    "first_workout": "Pushups",
+    "second_workout": "Dumbbell Press",
+    "third_workout": "Dumbbell Rows",
+    "fourth_workout": "Bench Press"
+},
+{
+    "plan_name": "Power Cardio",
+    "first_workout": "Mile Run",
+    "second_workout": "Burpees",
+    "third_workout": "100m Sprint"
+}
+]
