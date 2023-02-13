@@ -1,6 +1,7 @@
 const User = require('./User');
 const Workout = require('./Workout');
 const Plan = require('./Plan');
+const Quote = require('./Quote')
 
 User.hasMany(Plan, {
     foreignKey: 'user_id'
@@ -24,4 +25,5 @@ module.exports = {
     User,
     Workout,
     Plan,
+    Quote,
  };
