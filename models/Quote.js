@@ -12,7 +12,7 @@ Quote.init(
         primaryKey: true,
       },
       quote: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
       },
     },
@@ -21,7 +21,7 @@ Quote.init(
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'workout',
+      modelName: 'quote',
     },
   );
   
