@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness4U</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header class="hero is- primary is-justify-content-space-between is-align-content-center">
+    <h1 has-text-centered>
+      Fitness4U
+    </h1>
+    {{#if logged_in}}
+    <nav class="buttons">
+      <button class="button is-primary" id="logout">logout</button>
+      <a href="/create">Become a poster and create your own post here!</a>
+    </nav>
+    {{/if}}
+
+  </header>
+  <main class="container container-fluid mt-5">
+    {{{ body }}}
+  </main>
+  <footer class="has-text-centered is-size-4">
+      <p class="has-text-dark">Thank you for visiting!</p>
+  </footer>
+
+  {{#if logged_in}}
+  <script src="./js/postbox.js"></script>
+  <script src="./js/logout.js"></script>
+  {{else}}
+  <script src="./js/login.js"></script>
+  {{/if}}
+
+</body>
+
+</html>
