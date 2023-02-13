@@ -1,0 +1,44 @@
+body {
+    background-image: linear-gradient(to right, #FFC107, #FF5733);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 1em;
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+  }
+  
+  section {
+    background-color: #fff;
+    color: #333;
+    width: 30%;
+    padding: 1em;
+    text-align: center;
+  }
