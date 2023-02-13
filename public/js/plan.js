@@ -1,12 +1,12 @@
 const planCreate = async (event) => {
     event.preventDefault()
     
-    const plan_name = document.querySelector('#plan-name').value().trim();
-    const first_workout = document.querySelector('#first-workout').value().trim();
-    const second_workout = document.querySelector('#second-workout').value().trim();
-    const third_workout = document.querySelector('#third-workout').value().trim();
-    const fourth_workout = document.querySelector('#fourth-workout').value().trim();
-    const fifth_workout = document.querySelector('#fifth-workout').value().trim();
+    const plan_name = document.querySelector('#plan-name').value.trim();
+    const first_workout = document.querySelector('#first-workout').value.trim();
+    const second_workout = document.querySelector('#second-workout').value.trim();
+    const third_workout = document.querySelector('#third-workout').value.trim();
+    const fourth_workout = document.querySelector('#fourth-workout').value.trim();
+    const fifth_workout = document.querySelector('#fifth-workout').value.trim();
 
     if (plan_name && first_workout && second_workout && third_workout) {
         const response = await fetch('/api/plans', {
@@ -66,8 +66,10 @@ const planDelete = async (event) => {
         } else {
           alert('Failed to delete project');
         }
-      }
-    };
+    }
+};
+
+const profileButton = async (event) =>
   
 document.querySelector('#plan-delete').addEventListener('click', planDelete);
 

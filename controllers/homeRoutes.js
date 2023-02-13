@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Plan, User } = require('../models');
-const withAuth = require('../utils/auth');
+// const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
     // Pass serialized data and session flag into template
     res.render('homepage', { 
       plans, 
-      logged_in: req.session.logged_in 
+      // logged_in: req.session.logged_in 
     });
   } catch (err) {
     res.status(500).json(err);
@@ -42,7 +42,7 @@ router.get('/plan/:id', async (req, res) => {
 
     res.render('plan', {
       ...plan,
-      logged_in: req.session.logged_in
+      // logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -50,7 +50,7 @@ router.get('/plan/:id', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/profile', async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
@@ -72,7 +72,7 @@ router.get('/profile', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/profile');
+    res.redirect('homepage');
     return;
   }
 
