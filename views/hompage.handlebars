@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Workout Page</title>
+  </head>
+  <body>
+    <div style="position: relative;">
+      <img src="805233.jpeg" alt="Your Image" style="width: 100%; height: auto; margin: 0%;">
+      <button id="get-started-button" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: red; color: white; font-weight: bold; padding: 10px 20px;">Get Started</button>
+      <script>
+        document.getElementById("get-started-button").addEventListener("click", function() {
+          window.location.href = "http://127.0.0.1:5501/BMI.html";
+        });
+      </script>
+      <button id="login-button" style="position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); background-color: rgb(1, 0, 0); color: white; font-weight: bold; padding: 10px 20px;">Login</button>
+      <form id="login-form" style="display: none;">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <button type="submit">Create Account</button>
+      </form>
+      <script>
+        document.getElementById("login-button").addEventListener("click", function() {
+          document.getElementById("login-form").style.display = "block";
+        });
+      </script>
+    </div>
+  </body>
+</html>
