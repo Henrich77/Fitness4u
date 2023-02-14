@@ -9,19 +9,24 @@ const planCreate = async (event) => {
     const fifth_workout = document.querySelector('#fifth-workout').value.trim();
 
     if (plan_name && first_workout && second_workout && third_workout) {
-        const response = await fetch('/api/plans', {
+        const response = await fetch('/api/plans/', {
             method: 'POST',
             body: JSON.stringify({ plan_name, first_workout, second_workout, third_workout, fourth_workout, fifth_workout }),
             headers: { 'Content-Type': 'application/json' },
-        });
-        
+        },
+
+        );
+
         if (response.ok) {
             document.location.reload();
+            console.log({ plan_name, first_workout, second_workout, third_workout, fourth_workout, fifth_workout })
         } else {
-            alert('Failed to create project');
+            alert('Failed to create plan');
         }
     }
 };
+
+document.querySelector('#plan-create-form').addEventListener('submit', planCreate);
   
 
 
@@ -51,29 +56,31 @@ const planCreate = async (event) => {
 //         }
 //     }
 // };
-  
-// const planDelete = async (event) => {
-//     if (event.target.hasAttribute('data-id')) {
-//         const id = event.target.getAttribute('data-id');
-    
-//         const response = await fetch(`/api/projects/${id}`, {
-//           method: 'DELETE',
-//         });
-    
-//         if (response.ok) {
-//           document.location.reload();
-//         } else {
-//           alert('Failed to delete project');
-//         }
-//     }
-// };
-
-
-// document.querySelector('#plan-delete').addEventListener('click', planDelete);
 
 // document.querySelector('#plan-update').addEventListener('click', planUpdate);
+  
+const planDelete = async (event) => {
+    if (event.target.hasAttribute('data-id')) {
+        const id = event.target.getAttribute('data-id');
+    
+        const response = await fetch(`/api/plans/${id}`, {
+          method: 'DELETE',
+        });
+    
+        if (response.ok) {
+          document.location.reload();
+        } else {
+          alert('Failed to delete plan');
+        }
+    }
+};
 
-document.querySelector('.plan-create-form').addEventListener('submit', planCreate);
+
+document.querySelector('.plan-list').addEventListener('click', planDelete);
+
+
+
+
 
 
 

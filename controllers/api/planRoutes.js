@@ -27,17 +27,17 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-router.get('/:id', withAuth, async (req, res) => {
-  // find a specific plan
-  try {
-    const planData = await Plan.findByPk({
-     });
-    res.status(200).json(planData);
-  } catch (err) {
-    res.status(500).json(err)
-  }
-  // be sure to include its associated Category and Tag data
-});
+// router.get('/:id', withAuth, async (req, res) => {
+//   // find a specific plan
+//   try {
+//     const planData = await Plan.findByPk({
+//      });
+//     res.status(200).json(planData);
+//   } catch (err) {
+//     res.status(500).json(err)
+//   }
+//   // be sure to include its associated Category and Tag data
+// });
 
 // // router.put('/:id', async (req, res) => {
 // //   try {

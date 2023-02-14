@@ -5,36 +5,36 @@
     </div>
     </div>
 
-    <div clas="custom-plans">
+    <div class="custom-plans is-flex-direction-row">
 
         <h4 class="is-size-3">Your Plans</h4>
         {{#if plans.length}}
-        <div class="col-md-6 project-list">
-        <h3>Your Current Plans:</h3>
+        <div class="col-md-6 plan-list">
+        
 
         {{#each plans as |plan|}}
         <div class="row mb-2">
         <div class="col-md-8">
-            <h4><a href="/project/{{plan.id}}">{{plan.plan_name}}</a></h4>
+            <h4><a href="/api/plans/{{plan.id}}">{{plan.plan_name}}</a></h4>
         </div>
         <div class="col-md-4">
-            <button class="btn btn-sm btn-danger" data-id="{{plan.id}}">DELETE</button>
+            <button class="button is-primary" data-id="{{plan.id}}">DELETE</button>
         </div>
         </div>
         {{/each}}
         </div>
         {{else}}
-        <p class="is-size-4">You don't have any personalized plans! Why not create one below?</p>
+        <p class="is-size-7">You don't have any personalized plans! Why not create one below?</p>
         {{/if}}
 
     </div>
 
-    <form class="col-md-6" class="form plan-create-form" id="plan-create">
+    <form class="col-md-6" class="form plan-create-form" id="plan-create-form">
         <h3 class="is-size-3">Create a New Plan</h3>
 
         <div>
             <h3 class="is-size-4 has-text-weight-semibold">Plan Name</h3>
-            <input class="input is-info is-small" id="plan-name" type="name" placeholder="Name Your Plan">
+            <input class="input is-info is-small" id="plan-name" type="text" placeholder="Name Your Plan">
         </div>
         <div>
             <h3 class="is-size-4 has-text-weight-semibold">First Workout</h3>
@@ -59,4 +59,4 @@
         <button class="button is-black plan-create-form" type="submit" id="plan-create-form">Submit</button>
     </form>
 </div>
-    <script src="./js/plan.js"></script>
+<script src="./js/plan.js"></script>
