@@ -3,7 +3,7 @@ const { Workout } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   // find all workouts
   try {
     const workoutData = await Workout.findAll({
@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
   // be sure to include its associated Category and Tag data
 });
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const newWorkout = await Workout.create({
       ...req.body,
@@ -28,7 +28,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
   try {
     const newWorkout = await Workout.update(
       req.body, {
@@ -46,7 +46,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const workoutData = await Workout.destroy({
       where: {

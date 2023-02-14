@@ -1,1 +1,30 @@
-<h1> HI</h1>>
+  {{#if plans.length}}
+  <div class="col-md-6 project-list">
+    <h3 class="is-size-2 has-text-centered">Plans</h3>
+
+    {{#each plans as |plan|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4 class="is-size-3"><a href="/api/plans/{{plan.id}}">{{plan.plan_name}}</a></h4>
+        <ol class=" is-size-5">
+           <li>{{plan.first_workout}}</li>
+           <li>{{plan.second_workout}}</li> 
+           <li>{{plan.third_workout}}</li>
+           {{#if fourth_workout}} 
+           <li>{{plan.fourth_workout}}</li>
+           {{/if}}
+           {{#if fifth_workout}}
+           <li>{{plan.fifth_workout}}</li>
+           {{/if}}  
+        </ol>
+      </div>
+      <div class="col-md-4">
+        {{#if logged_in}}
+        <button class="button is-primary" data-id="{{plan.id}}">DELETE</button>
+        {{/if}}
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>

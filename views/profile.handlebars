@@ -1,1 +1,61 @@
-<h1>Profile</h1>
+<div class="row">
+  <div class="col-auto">
+    <h2 class="is-size-2">Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div clas="custom-plans">
+
+    <h4 class="is-size-3">Your Plans</h4>
+    {{#if plans.length}}
+    <div class="col-md-6 project-list">
+    <h3>Your Current Plans:</h3>
+
+    {{#each plans as |plan|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{plan.id}}">{{plan.plan_name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{plan.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+    </div>
+    {{else}}
+    <p class="is-size-4">You don't have any personalized plans! Why not create one below?</p>
+    {{/if}}
+
+</div>
+
+<div class="col-md-6" id="plan-create">
+    <h3 class="is-size-3">Create a New Plan:</h3>
+
+    <div>
+        <h3 class="is-size-4 has-text-weight-semibold">Plan Name</h3>
+        <input class="input is-info is-small" id="plan-name" type="name" placeholder="Name Your Plan">
+    </div>
+    <div>
+        <h3 class="is-size-4 has-text-weight-semibold">First Workout</h3>
+        <input class="input is-info is-small" id="first-workout" type="text" placeholder="First Workout">
+    </div>
+    <div>
+        <h3 class="is-size-4 has-text-weight-semibold">Second Workout</h3>
+        <input class="input is-info is-small" id="second-workout" type="text" placeholder="Second Workout">
+    </div>
+    <div>
+        <h3 class="is-size-4 has-text-weight-semibold">Third Workout</h3>
+        <input class="input is-info is-small" id="third-workout" type="text" placeholder="Third Workout">
+    </div>
+    <div>
+        <h3 class="is-size-4 has-text-weight-semibold">Fourth Workout</h3>
+        <input class="input is-info is-small" id="fourth-workout" type="text" placeholder="Fourth Workout">
+    </div>
+    <div>
+        <h3 class="is-size-4 has-text-weight-semibold">Fifth Workout</h3>
+        <input class="input is-info is-small" id="fifth-workout" type="text" placeholder="Fifth Workout">
+    </div>
+    <button class="button is-black" id="plan-create">Submit</button>
+</div>
+
+<script src="./js/plan.js"></script>

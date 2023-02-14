@@ -1,4 +1,4 @@
-body {
+/* body {
     background-image: linear-gradient(to right, #FFC107, #FF5733);
     background-size: cover;
     background-repeat: no-repeat;
@@ -41,4 +41,21 @@ body {
     width: 30%;
     padding: 1em;
     text-align: center;
-  }
+  } */
+
+  main {
+    min-height: 90vh;
+}
+
+button {
+    margin: 1rem;
+}
+
+.custom-plans {
+
+  margin-bottom: 1rem;
+}
+
+header {
+  border-bottom: black solid 3px;
+}
