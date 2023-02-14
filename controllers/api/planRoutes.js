@@ -17,8 +17,8 @@ router.get('/', withAuth, async (req, res) => {
 router.post('/', withAuth, async (req, res) => {
   try {
     const newPlan = await Plan.create({
-      ...req.body,
-      // user_id: req.session.user_id,
+      ...req.body, 
+      user_id: req.session.user_id,
     });
 
     res.status(200).json(newPlan);
@@ -62,7 +62,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     const planData = await Plan.destroy({
       where: {
         id: req.params.id,  
-        // user_id: req.session.user_id,      
+        user_id: req.session.user_id,      
       },
       
     });

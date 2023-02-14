@@ -59,3 +59,7 @@ button {
 header {
   border-bottom: black solid 3px;
 }
+
+.profile-div {
+  background-image: url("../../805233.jpeg");
+}
