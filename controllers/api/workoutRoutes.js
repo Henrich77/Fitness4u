@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Workout } = require('../../models');
+const { Workout, Plan } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
@@ -66,5 +66,9 @@ router.delete('/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+
+
 
 module.exports = router;
