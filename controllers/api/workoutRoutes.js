@@ -3,7 +3,7 @@ const { Workout } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   // find all workouts
   try {
     const workoutData = await Workout.findAll({
@@ -15,11 +15,11 @@ router.get('/', async (req, res) => {
   // be sure to include its associated Category and Tag data
 });
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const newWorkout = await Workout.create({
       ...req.body,
-      // user_id: req.session.user_id,
+      user_id: req.session.user_id,
     });
 
     res.status(200).json(newWorkout);
@@ -28,15 +28,15 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
   try {
     const newWorkout = await Workout.update(
       req.body, {
         where: {
           id: req.params.id,
-          
+          user_id: req.session.user_id,
         },
-        // user_id: req.session.user_id,
+        
       },      
     );
 
@@ -46,14 +46,14 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const workoutData = await Workout.destroy({
       where: {
         id: req.params.id,
-        
+        user_id: req.session.user_id,
       },
-      // user_id: req.session.user_id,
+      
     });
 
     if (!workoutData) {

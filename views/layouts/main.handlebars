@@ -10,14 +10,18 @@
 </head>
 
 <body>
-  <header class="hero is- primary is-justify-content-space-between is-align-content-center">
-    <h1 has-text-centered>
+  <header class="hero is-primary is-flex">
+    <h1 class="is-size-1">
       Fitness4U
     </h1>
     {{#if logged_in}}
     <nav class="buttons">
       <button class="button is-primary" id="logout">logout</button>
-      <a href="/create">Become a poster and create your own post here!</a>
+      <a href="/profile"><button class="button is-primary" id="create-plan">View and Create Your Personal Plans</button></a>
+    </nav>
+    {{else}}
+    <nav>
+        <a href="/login">Log In Here</a>
     </nav>
     {{/if}}
 
@@ -30,7 +34,6 @@
   </footer>
 
   {{#if logged_in}}
-  <script src="./js/postbox.js"></script>
   <script src="./js/logout.js"></script>
   {{else}}
   <script src="./js/login.js"></script>

@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Plan } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     // find all plans
     try {
       const planData = await Plan.findAll({
@@ -14,11 +14,11 @@ router.get('/', async (req, res) => {
     // be sure to include its associated Category and Tag data
   });
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const newPlan = await Plan.create({
-      ...req.body,
-      // user_id: req.session.user_id,
+      ...req.body, 
+      user_id: req.session.user_id,
     });
 
     res.status(200).json(newPlan);
@@ -27,13 +27,29 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.get('/:id', withAuth, async (req, res) => {
+  // find a specific plan
+  try {
+    const planData = await Plan.findByPk({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+     });
+    res.status(200).json(planData);
+  } catch (err) {
+    res.status(500).json(err)
+  }
+  // be sure to include its associated Category and Tag data
+});
+
 router.put('/:id', async (req, res) => {
   try {
     const newPlan = await Plan.update(
       ...req.body, {
         where: {
           id: req.params.id,
-          // user_id: req.session.user_id,
+          user_id: req.session.user_id,
         },
         
       },      
@@ -45,12 +61,12 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const planData = await Plan.destroy({
       where: {
         id: req.params.id,  
-        // user_id: req.session.user_id,      
+        user_id: req.session.user_id,      
       },
       
     });
