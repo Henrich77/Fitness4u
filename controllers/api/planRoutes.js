@@ -8,6 +8,14 @@ router.get('/', withAuth, async (req, res) => {
       const planData = await Plan.findAll({
        });
       res.status(200).json(planData);
+
+      const plans = planData.map((plan) => 
+      plan.get({ plain: true })
+      );
+
+      res.render('workouts', {
+        plans,
+      })
     } catch (err) {
       res.status(500).json(err)
     }

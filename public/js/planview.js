@@ -7,7 +7,7 @@ const planView = async (event) => {
         });
     
         if (response.ok) {
-          document.location.replace('/workouts');
+          console.log('Thinking')
         } else {
           alert('Failed to get plan information');
         }
