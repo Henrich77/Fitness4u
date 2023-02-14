@@ -7,18 +7,19 @@
 
     <div class="custom-plans is-flex-direction-row">
 
-        <h4 class="is-size-3">Your Plans</h4>
+        <h4 class="is-size-3">Your Plans</h4> 
         {{#if plans.length}}
+        <button class="button is-small is-primary" id='show-plans'>SHOW PLANS</button>
         <div class="col-md-6 plan-list">
         
 
         {{#each plans as |plan|}}
         <div class="row mb-2">
         <div class="col-md-8">
-            <h4><a href="/api/plans/{{plan.id}}">{{plan.plan_name}}</a></h4>
+            <h4 class="is-size-3"><a href="/api/plans/{{plan.id}}">{{plan.plan_name}}</a></h4>
         </div>
-        <div class="col-md-4">
-            <button class="button is-primary" data-id="{{plan.id}}">DELETE</button>
+        <div class="col-md-4">            
+            <button class="button is-small is-primary" data-id="{{plan.id}}">DELETE</button>
         </div>
         </div>
         {{/each}}
@@ -33,19 +34,19 @@
         <h3 class="is-size-3">Create a New Plan</h3>
 
         <div>
-            <h3 class="is-size-4 has-text-weight-semibold">Plan Name</h3>
+            <h3 class="is-size-4 has-text-weight-semibold">Plan Name *</h3>
             <input class="input is-info is-small" id="plan-name" type="text" placeholder="Name Your Plan">
         </div>
         <div>
-            <h3 class="is-size-4 has-text-weight-semibold">First Workout</h3>
+            <h3 class="is-size-4 has-text-weight-semibold">First Workout *</h3>
             <input class="input is-info is-small" id="first-workout" type="text" placeholder="First Workout">
         </div>
         <div>
-            <h3 class="is-size-4 has-text-weight-semibold">Second Workout</h3>
+            <h3 class="is-size-4 has-text-weight-semibold">Second Workout *</h3>
             <input class="input is-info is-small" id="second-workout" type="text" placeholder="Second Workout">
         </div>
         <div>
-            <h3 class="is-size-4 has-text-weight-semibold">Third Workout</h3>
+            <h3 class="is-size-4 has-text-weight-semibold">Third Workout *</h3>
             <input class="input is-info is-small" id="third-workout" type="text" placeholder="Third Workout">
         </div>
         <div>
@@ -58,5 +59,9 @@
         </div>
         <button class="button is-black plan-create-form" type="submit" id="plan-create-form">Submit</button>
     </form>
+    <div class="has-text-centered">
+        <p class="is-size-7">* Denotes a required field</p>
+    </div>
 </div>
 <script src="./js/plan.js"></script>
+<script src="./js/planview.js"></script>

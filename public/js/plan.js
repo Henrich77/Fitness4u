@@ -19,7 +19,7 @@ const planCreate = async (event) => {
 
         if (response.ok) {
             document.location.reload();
-            console.log({ plan_name, first_workout, second_workout, third_workout, fourth_workout, fifth_workout })
+            // console.log({ plan_name, first_workout, second_workout, third_workout, fourth_workout, fifth_workout })
         } else {
             alert('Failed to create plan');
         }
@@ -77,6 +77,8 @@ const planDelete = async (event) => {
 
 
 document.querySelector('.plan-list').addEventListener('click', planDelete);
+
+
 
 
 
