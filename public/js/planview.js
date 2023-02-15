@@ -8,4 +8,4 @@ const myPlanView = async () => {
     document.location.replace('/myplans')
 };
 
-document.querySelector('#show-my-plans').addEventListener('click', planView)
+document.querySelector('#show-my-plans').addEventListener('click', myPlanView)
