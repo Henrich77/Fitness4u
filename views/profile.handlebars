@@ -13,16 +13,16 @@
         
         <button class="button is-small is-primary" id='show-my-plans' style="color: black;font-family:'Contrail One', cursive; background-color:red">SHOW MY PLANS</button>        
 
-        <div class="col-md-6 plan-list plan-reveal">
+        <div class="col-md-6 plan-list">
         
 
         {{#each plans as |plan|}}
         <div class="row mb-2">
         <div class="col-md-8">
-            <h4 class="is-size-3"><a href="/api/plans/{{plan.id}}">{{plan.plan_name}}</a></h4>
+            <h4 class="is-size-4" style="color: rgb(255, 255, 255);font-family:'Contrail One', cursive;">{{plan.plan_name}}</a></h4>
         </div>
         <div class="col-md-4">                    
-            <button class="button is-small is-primary" data-id="{{plan.id}}" style="color:black; background-color:red;font-family:'Contrail One', cursive;">DELETE</button>
+            <button class="button is-small is-primary" data-id="{{plan.id}}" style="color:black; background-color:red;font-family:'Contrail One', cursive;">DELETE</button>            
         </div>
         </div>
         {{/each}}
