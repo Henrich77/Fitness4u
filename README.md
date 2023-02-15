@@ -1,15 +1,9 @@
 
-  # Fitness4u
-https://img.shields.io/github/license/Henrich77/fitness4u  
+  # Fitness4u  
+![GitHub](https://img.shields.io/github/license/Henrich77/fitness4u)
 
   
   
-  
-  ## License
-
-
- 
- 
   ## Table of Contents
   
   [Description](#description)
@@ -31,8 +25,6 @@ https://img.shields.io/github/license/Henrich77/fitness4u
 
 
   <img width="1512" alt="Screenshot 2023-02-15 at 10 29 56 AM" src="https://user-images.githubusercontent.com/119962472/219100801-94051d21-b821-47d1-9bac-79dac6e1680b.png">
-
-  <img width="1508" alt="Screenshot 2023-02-15 at 10 30 27 AM" src="https://user-images.githubusercontent.com/119962472/219100804-b848bb2d-837f-4a40-a293-0f507ac9c3d2.png">
 
 
   <img width="1510" alt="Screenshot 2023-02-15 at 10 47 21 AM" src="https://user-images.githubusercontent.com/119962472/219100808-a4e4ac1a-600d-4a97-bca0-3162ae877197.png">
