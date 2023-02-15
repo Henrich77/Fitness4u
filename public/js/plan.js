@@ -9,7 +9,7 @@ const planCreate = async (event) => {
     const fifth_workout = document.querySelector('#fifth-workout').value.trim();
 
     if (plan_name && first_workout && second_workout && third_workout) {
-        const response = await fetch('/plans/', {
+        const response = await fetch('/api/plans', {
             method: 'POST',
             body: JSON.stringify({ plan_name, first_workout, second_workout, third_workout, fourth_workout, fifth_workout }),
             headers: { 'Content-Type': 'application/json' },
@@ -19,7 +19,7 @@ const planCreate = async (event) => {
 
         if (response.ok) {
             document.location.reload();
-            // console.log({ plan_name, first_workout, second_workout, third_workout, fourth_workout, fifth_workout })
+            
         } else {
             alert('Failed to create plan');
         }
