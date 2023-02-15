@@ -13,9 +13,28 @@ router.get('/', async (req, res) => {
     const plans = planData.map((plan) => plan.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', {
-      plans, 
-      logged_in: req.session.logged_in 
+    res.render('index', {layout:'home',
+      
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/allplans', async (req, res) => {
+  try {
+    // Get all plans and JOIN with user data
+    const planData = await Plan.findAll({
+
+    });
+
+    // Serialize data so the template can read it
+    const plans = planData.map((plan) => plan.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('homepage', { layout: 'main',
+    plans, 
+    logged_in: req.session.logged_in, 
     });
   } catch (err) {
     res.status(500).json(err);
