@@ -1,65 +1,129 @@
-/* body {
-    background-image: linear-gradient(to right, #FFC107, #FF5733);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
+html,body {
+
+    background-color: black;
+}
+
+.hero.is-primary.is-flex.header{
+
+    background-color: black;
+}
+
+h1 {
+
+    color: red;
+    font-family: 'Rubik Vinyl', cursive;
+    font-size: 50px;
+
+}
+
+
+#navbar {
+
+    background-color: black;
+}
+
+.navbar.html{
+
+    background-color: black;
+}
+
+.button.is-primary.button2{
+
+    background-color: red;
+    color: black;
+    font-family: 'Contrail One', cursive;
+}
+
+.button.is-light.button2{
+
+    background-color: red;
+    font-family: 'Contrail One', cursive;
+
+}
+
+#quote {
+
+    background-color: black;
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Covered By Your Grace', cursive;
+
+}
+
+#getStarted{
+
+    background-color: black;
     display: flex;
     justify-content: center;
-    align-items: center;
-  }
-  
-  header {
+    
+}
+
+.beginBttn{
+
+    background-color: red;
+    font-family: 'Contrail One', cursive;
+
+    font-size: 25px;
+    color: black
+}
+.has-text-right.quote {
+
+    font-family: 'Covered By Your Grace', cursive;
+    color: red;
+    font-size: 30px;
+}
+
+.form.login-form.box.login {
+
+    background-color: darkgray;
+}
+
+.form.signup-form.box.sign-up {
+
+    background-color: darkgray;
+}
+
+footer p {
+
+    color: white;
+}
+
+.button.is-black.login-form.login  {
+
+    background-color: red;
+    color: black;
+    font-family: 'Contrail One', cursive;
+}
+
+.button.is-black.signup-form.sign-up {
+
+    background-color: red;
+    color: black;
+    font-family: 'Contrail One', cursive;  
+}
+
+form h2 {
+
+    /* font-family: 'Contrail One', cursive;   */
+    font-size: 35px;
+    font-weight: bolder;
     text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0 1em;
-  }
-  
-  main {
-    display: flex;
-    justify-content: space-around;
-    padding: 1em;
-  }
-  
-  section {
-    background-color: #fff;
-    color: #333;
-    width: 30%;
-    padding: 1em;
-    text-align: center;
-  } */
-
-  main {
-    min-height: 90vh;
 }
 
-button {
-    margin: 1rem;
+.card.cards {
+
+    width: 400px;
+    height: 200px;
+    margin-left: 5px;
+    margin-top: 5rem;
+    background-color: black;
+    color: white;
+    
 }
 
-.custom-plans {
+.card.cards:hover{
 
-  margin-bottom: 1rem;
+    background-color: red;
 }
 
-header {
-  border-bottom: black solid 3px;
-}
 
-.profile-div {
-  background-image: url("../../805233.jpeg");
-}

@@ -5,35 +5,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fitness4U</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  <header class="hero is-primary is-flex">
-    <h1 class="is-size-1">
+  <header class="hero is-primary is-flex header" style="display: inline-flex; flex-direction:row">
+     <a href="/"><h1 class="is-size-1">
       Fitness4U
-    </h1>
-
-    <p class="is-size-6 has-text-right">{{ randomizeQuote }}</p>
-
-    {{#if logged_in}}
+    </h1></a>
+     {{#if logged_in}}
     <nav class="buttons">
-      <button class="button is-primary" id="logout">logout</button>
-      <a href="/profile"><button class="button is-primary" id="create-plan">View and Create Your Personal Plans</button></a>
+      <button class="button is-primary" id="logout" style="color:black; background-color:red">logout</button>
+      <a href="/profile"><button class="button is-primary" id="create-plan" style="color:black; background-color:red">View and Create Your Personal Plans</button></a>
     </nav>
     {{else}}
     <nav>
-        <a href="/login">Log In Here</a>
+        <a href="/"><button style="color:black; background-color:red; border-radius: 7px; font-size: 27px;font-family:'Contrail One', cursive;">Home</button></a>
     </nav>
     {{/if}}
 
+    {{!-- <h1 class="is-size-1">
+      Fitness4U
+    </h1>
+
+    <p class="has-text-right quote" style="color:white">{{ randomizeQuote }}</p>
+
+    {{#if logged_in}}
+    <nav class="buttons">
+      <button class="button is-primary" id="logout" style="color:black; background-color:red">logout</button>
+      <a href="/profile"><button class="button is-primary" id="create-plan" style="color:black; background-color:red">View and Create Your Personal Plans</button></a>
+    </nav>
+    {{else}}
+    <nav>
+        <a href="/">Home</a>
+    </nav>
+    {{/if}} --}}
+
   </header>
+   <p class="has-text-right quote" style="color:white">{{ randomizeQuote }}</p>
   <main class="container container-fluid mt-5">
     {{{ body }}}
   </main>
   <footer class="has-text-centered is-size-4">
-      <p class="has-text-dark">Thank you for visiting!</p>
+      <p >Thank you for visiting!</p>
   </footer>
 
   {{#if logged_in}}

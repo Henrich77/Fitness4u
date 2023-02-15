@@ -1,0 +1,653 @@
+:root {
+    --icons-color: #4c5773;
+    --icons-bg-color: #e2e6e9;
+    --shadow-dark-color: #d3dae7;
+    --shadow-light-color: #fff;
+    --main-bg-color: #ecf0f3;
+
+
+    --box-shadow: 1rem 1rem 1rem var(--shadow-dark-color),
+        -1rem -1rem 1rem var(--shadow-light-color);
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--main-bg-color);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.uil{
+    color: var(--icons-color);
+    cursor: pointer;
+}
+
+p{
+    color: var(--icons-color);
+}
+
+h1,h2,h3,h4,h5{
+    color: var(--icons-color);
+}
+
+.dash-conatiner{
+    width: 84vw;
+    height: 80vh;
+    background: var(--main-bg-color);
+    /* border-radius: 1rem; */
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    box-shadow: var(--box-shadow);
+    border-radius: 2rem;
+}
+
+.dash-conatiner .dash-inner-container{
+  
+    /* background: violet; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border-radius: 2rem;
+    /* gap: 1rem; */
+}
+
+/* ====================Left==================== */
+
+.dash-conatiner .dash-inner-container .desh-left{
+   
+    width: 40%;
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+/* ==============icon Container=================== */
+
+.desh-left .desh-app{
+    background: var(--main-bg-color);
+    width: 30%;
+    padding: 1rem;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow)
+}
+
+
+.desh-app h4{
+    text-align: center;
+    color: var(--icons-color);
+    font-size: 18px;
+    margin-bottom: 2rem;
+}
+
+.desh-app .desh-icon-container{
+    width: 100%;
+    margin-top: 1.2rem;
+    text-align: center;
+}
+
+.desh-app .dash-inner-container .desh-icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.desh-icons i{
+    font-size: 20px;
+    background: var(--icons-bg-color);
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: var(--icons-color);
+}
+
+.desh-icons i:hover{
+box-shadow: var(--box-shadow);
+}
+
+.active{
+    box-shadow: var(--box-shadow);
+
+}
+
+/* ==========Popup icon=========== */
+
+.desh-icons .uil-stop-circle{
+    font-size: 12px;
+    position: absolute;
+    margin-left: 5rem;
+    margin-top: 0.3rem;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========Popup icon=========== */
+
+.desh-icons div{
+    margin-top: 1.2rem;
+}
+
+.desh-icons div a{
+    color: var(--icons-color);
+    font-size: 17px;
+}
+
+
+/* ==============usear profile================ */
+
+.desh-icons img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+
+.desh-icon-container .dot{
+    width: 10px;
+    height: 10px;
+    background: rgb(76, 243, 25);
+    position: absolute;
+    border-radius: 50%;
+    margin-top: -8rem;
+    margin-left: 5rem;
+
+}
+
+
+.desh-icons .uil-power{
+    font-size: 12px;
+}
+/* /======================Details====================== */
+
+.desh-left .desh-details{
+    background: #e9ebee;
+    width: 70%;
+    height: 100%;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+
+.desh-left .desh-details h1{
+    font-size: 25px;
+    color: var(--icons-color);
+    margin-bottom: 0.5rem;
+}
+
+.desh-left .desh-details p{
+    color: var(--icons-color)
+}
+
+.desh-details .detail-time{
+    margin-top: 1rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.desh-details .detail-time:hover{
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+
+}
+
+.round{
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+
+.desh-details .detail-time .time-list{
+    display: flex;
+    padding: 0.5rem 1rem;
+    justify-content: space-between;
+    background: var(--main-bg-color);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+/* .detail-time .time-list p{
+    /* margin-left: -3rem; */
+ */
+
+.detail-time .time-list input{
+    background: var(--main-bg-color);
+    color: var(--icons-color);
+    cursor: pointer;
+}
+
+/* ===========Button============== */
+
+.button{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.8rem;
+}
+
+.button button{
+    padding: 1rem;
+    color: var(--icons-color);
+    border-radius: 1rem;
+}
+
+/* ==============Day Box Container============= */
+
+.day-box-container{
+    width: 250px;
+    height: 200px;
+    background: var(--main-bg-color);
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    position: absolute;
+    margin-top: -12rem;
+    margin-left: -2rem;
+    padding: 1rem;
+    padding-top: 2rem;
+    display: none;
+}
+
+.day-box-container .inner-box-container{
+width: 100%;
+height: 100%;
+}
+
+.inner-box-container .box-line{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    gap: 1.3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-line .line-div{
+    width: 10px;
+    height: 100%;
+    background: var(--icons-color);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+.box-line .link-color{
+    width: 10px;
+    height: 80%;
+    background: violet;
+    border-radius: 5px;
+}
+
+.inner-box-container .box-days{
+    width: 100%;
+    height: 20%;
+    margin-top: 1rem;
+}
+
+.box-days span{
+    margin: 1px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 0.3rem;
+    margin-top: 1rem;
+    color: var(--icons-color);
+}
+
+
+/* ======================Dash Right Container ============== */
+
+.desh-right{
+    width: 60%;
+    height: 100%;
+    background: #e9ebee;
+    border-radius: 2rem;
+}
+
+.desh-right .desh-right-container{
+    width: 100%;
+    height: 40%;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 1rem;
+    display: flex;
+    gap: 3rem;
+}
+
+.desh-right-container .right-left-container{
+    width: 30%;
+    height: 100%;
+    background: var(--main-bg-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.right-left-container h3{
+    color: var(--icons-color);
+    margin-bottom: 0.5rem;
+}
+
+.right-left-container .box-div{
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.right-left-container .box-div .div-box1{
+display: flex;
+gap: 0.3rem;
+justify-content: space-between;
+align-items: center;
+}
+
+.div-box1 .square{
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--icons-color);
+    border-radius: 5px;
+}
+
+.side-box{
+    display: flex;
+    justify-content: end;
+}
+
+.box-side{
+    display: flex;
+    justify-content: start;
+}
+
+.box-active{
+    background: var(--icons-color);
+}
+.box-active small{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-bg-color);
+    margin-top: 0.2rem;
+}
+
+.desh-right-container .right-right-container{
+    width: 70%;
+    height: 100%;
+    background: var(--main-bg-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+}
+
+/* ========================================= */
+
+.right-right-container {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.right-right-container .right-info{
+    width: 70%;
+    height: 100%;
+}
+
+.right-right-container .right-info h2{
+    font-size: 20px;
+    color: var(--icons-color);
+    margin-bottom: 0.5rem;
+}
+
+.right-info .lead{
+    margin-top: 1rem;
+}
+
+.right-info .right-button{
+    width: 100%;
+    box-shadow: var(--box-shadow);
+    padding: 1rem ;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--icons-color);
+}
+
+
+/* ======================================= */
+
+.right-image{
+    width: 30%;
+    position: relative;
+}
+
+.right-image img{
+    width: 180px;
+    height: 180px;
+    margin-left: -4rem;
+
+}
+
+/* ===================Upper Box=============== */
+
+.upper{
+    position: absolute;
+    width: 200px;
+    height: 75px;
+    background: var(--main-bg-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+    margin-top: -6rem;
+    margin-left: 9rem;
+    padding: 1rem;
+}
+
+.upper .upper-box{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.upper .upper-box i{
+    padding: 0.5rem;
+    background: var(--main-bg-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+}
+
+
+/* =============================Roght Down================= */
+
+.right-down-container{
+    width: 100%;
+    height: 54%;
+    background: #e9ebee;
+    border-radius: 2rem;
+}
+
+.right-down-container .down-container{
+    background: var(--main-bg-color);
+    width: 94%;
+    height: 100%;
+    padding: 1rem;
+    margin-top: 2rem;
+    box-shadow: var(--box-shadow);
+    margin-left: 1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;   
+    
+}
+
+
+
+.down-container h2{
+    color: var(--icons-color);
+    font-size: 25px;
+}
+
+.flex-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.main-app{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.down-inner-container .main-app .down-inner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--icons-color);
+    width: 90px;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.down-inner-box i{
+    font-size: 20px;
+}
+
+.main-app .down-inner-box h4{
+    font-size: 13px;
+    margin-top: 0.5rem;
+    text-align: center;
+    color: var(--icons-color);
+}
+
+.main-app .down-inner-box small{
+    margin-top: 0.5rem;
+}
+
+.main-app p{
+    margin-top: 1rem;
+    font-size: 10px;
+    
+}
+
+/* ======================Report Container===================== */
+
+.report-container{
+    width: 50%;
+    height: 25%;
+    margin-left: 4rem;
+    position: absolute;
+    /* background: var(--main-bg-color); */
+    margin-top: -7rem;
+    padding: 2rem;
+}
+
+.report-container .two-container{
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+.two-container .monthly-container{
+    width: 300px;
+    height: 100px;
+background: var(--main-bg-color);
+box-shadow: var(--box-shadow);
+border-radius: 1rem;
+display: flex;
+padding: 2rem;
+justify-content: start;
+align-items: center;
+gap: 1rem;
+}
+
+.monthly-container .monthly-info h4{
+font-size: 15px;
+color: var(--icons-color);
+margin-bottom: -0.2rem;
+}
+
+.monthly-container .monthly-icon i{
+font-size: 25px;
+}
+
+.monthly-container .monthly-line{
+    width: 140%;
+    height: 0.5rem;
+    background: violet;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.monthly-line .line{
+    width: 70%;
+    height: 0.5rem;
+    background: var(--icons-color);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+
+.two-container .being-container{
+    width: 300px;
+    height: 100px;
+    background: var(--main-bg-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+}
+
+/* =====================Chat box================ */
+
+.chat{
+    background: var(--main-bg-color);
+    padding: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 44rem;
+    margin-top: -20rem;
+    box-shadow: var(--box-shadow);
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+
+.chat .chat-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat i{
+    font-size: 50px;
+}
+
+/* =========================open chat box=========== */
+
+.chat-open{
+    position: absolute;
+    margin-top: -18rem;
+    margin-left: 40rem;
+}
+
+.chat-open .uil-stop-circle{
+    padding: 0.1rem;
+    background: var(--icons-color);
+    color: var(--main-bg-color);
+    border-radius: 50%;
+    
+}
