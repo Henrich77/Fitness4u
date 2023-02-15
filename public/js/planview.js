@@ -1,5 +1,5 @@
 const planView = async () => {
-    document.location.replace('/')
+    document.location.replace('/allplans')
 };
 
 document.querySelector('#show-plans').addEventListener('click', planView)
