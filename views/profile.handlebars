@@ -6,13 +6,14 @@
     </div>
 
     <div class="custom-plans is-flex-direction-row">
-
-
-        <h4 class="is-size-3" style="color: white;font-family:'Contrail One', cursive;">Your Plans</h4> 
-        {{#if plans.length}}
+        <h4 class="is-size-3" style="color: white;font-family:'Contrail One', cursive;">All Plans</h4> 
         <button class="button is-small is-primary" id='show-plans' style="color: black;font-family:'Contrail One', cursive; background-color:red">SHOW PLANS</button>
+        <h4 class="is-size-3" style="color: white;font-family:'Contrail One', cursive;">My Plans</h4> 
+        {{#if plans.length}}
+        
+        <button class="button is-small is-primary" id='show-my-plans' style="color: black;font-family:'Contrail One', cursive; background-color:red">SHOW MY PLANS</button>        
 
-        <div class="col-md-6 plan-list">
+        <div class="col-md-6 plan-list plan-reveal">
         
 
         {{#each plans as |plan|}}
@@ -20,7 +21,7 @@
         <div class="col-md-8">
             <h4 class="is-size-3"><a href="/api/plans/{{plan.id}}">{{plan.plan_name}}</a></h4>
         </div>
-        <div class="col-md-4">            
+        <div class="col-md-4">                    
             <button class="button is-small is-primary" data-id="{{plan.id}}" style="color:black; background-color:red;font-family:'Contrail One', cursive;">DELETE</button>
         </div>
         </div>
@@ -50,7 +51,7 @@
         </header>
          <div class="card-content">
         <div class="content">
-            <input class="input is-info is-small" id="first-workout " type="text" placeholder="workout 1">
+            <input class="input is-info is-small" id="first-workout" type="text" placeholder="workout 1">
 
 
         </div>
@@ -64,7 +65,7 @@
         </header>
          <div class="card-content">
         <div class="content">
-            <input class="input is-info is-small" id="second-workout " type="text" placeholder="workout 2">
+            <input class="input is-info is-small" id="second-workout" type="text" placeholder="workout 2">
 
         </div>
          </div>
@@ -78,7 +79,7 @@
         </header>
          <div class="card-content">
         <div class="content">
-            <input class="input is-info is-small" id="third-workout " type="text" placeholder="workout 3">
+            <input class="input is-info is-small" id="third-workout" type="text" placeholder="workout 3">
 
         </div>
          </div>
