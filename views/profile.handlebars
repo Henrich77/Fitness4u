@@ -1,15 +1,15 @@
 <div class="profile-div">
     <div class="row">
     <div class="col-auto">
-        <h2 class="is-size-2">Welcome, {{name}}!</h2>
+        <h2 class="is-size-2" style="text-align: center; color:red;font-family:'Contrail One', cursive;">Welcome, {{name}}!</h2>
     </div>
     </div>
 
     <div class="custom-plans is-flex-direction-row">
 
-        <h4 class="is-size-3">Your Plans</h4> 
+        <h4 class="is-size-3" style="color: white;font-family:'Contrail One', cursive;">Your Plans</h4> 
         {{#if plans.length}}
-        <button class="button is-small is-primary" id='show-plans'>SHOW PLANS</button>
+        <button class="button is-small is-primary" id='show-plans' style="color: black;font-family:'Contrail One', cursive; background-color:red">SHOW PLANS</button>
         <div class="col-md-6 plan-list">
         
 
@@ -19,21 +19,97 @@
             <h4 class="is-size-3"><a href="/api/plans/{{plan.id}}">{{plan.plan_name}}</a></h4>
         </div>
         <div class="col-md-4">            
-            <button class="button is-small is-primary" data-id="{{plan.id}}">DELETE</button>
+            <button class="button is-small is-primary" data-id="{{plan.id}}" style="color:black; background-color:red;font-family:'Contrail One', cursive;">DELETE</button>
         </div>
         </div>
         {{/each}}
         </div>
         {{else}}
-        <p class="is-size-7">You don't have any personalized plans! Why not create one below?</p>
+        <p class="is-size-7" style="color: white">You don't have any personalized plans! Why not create one below?</p>
         {{/if}}
 
     </div>
 
     <form class="col-md-6" class="form plan-create-form" id="plan-create-form">
-        <h3 class="is-size-3">Create a New Plan</h3>
+        <h3 class="is-size-3" style="margin-top: 5rem;" style="color: white;font-family:'Contrail One', cursive;">Create New Plan</h3>
+        <div style="display: flex; justify-content:center">
+            <h3 class="is-size-4 has-text-weight-semibold" style="margin-top: 2rem;" style="color: white;font-family:'Contrail One', cursive;">Plan Name *</h3>
+            <input class="input is-info is-small" id="plan-name" type="text" placeholder="Name Your Plan" style="width: 300px;margin-top:2rem">
+        </div>
+        
+        
+        <div style="display: flex;">
+   
+        <div class="card cards">
+             <header class="card-header">
+            <p class="card-header-title" style="color: white;font-family:'Contrail One', cursive;">
+                 First Workout *
+             </p>
+        </header>
+         <div class="card-content">
+        <div class="content">
+            <input class="input is-info is-small" id="first-workout " type="text" placeholder="workout 1">
 
-        <div>
+        </div>
+         </div>
+        </div> 
+        <div class="card cards">
+              <header class="card-header">
+            <p class="card-header-title" style="color: white;font-family:'Contrail One', cursive;" >
+                 Second Workout *
+             </p>
+        </header>
+         <div class="card-content">
+        <div class="content">
+            <input class="input is-info is-small" id="second-workout " type="text" placeholder="workout 2">
+
+        </div>
+         </div>
+        </div>
+    
+        <div class="card cards">
+            <header class="card-header">
+            <p class="card-header-title" style="color: white;font-family:'Contrail One', cursive;">
+                 Third Workout *
+             </p>
+        </header>
+         <div class="card-content">
+        <div class="content">
+            <input class="input is-info is-small" id="third-workout " type="text" placeholder="workout 3">
+
+        </div>
+         </div>
+        </div>
+       
+        <div class="card cards">
+              <header class="card-header">
+            <p class="card-header-title" style="color: white;font-family:'Contrail One', cursive;">
+                 Fourth Workout
+             </p>
+        </header>
+         <div class="card-content">
+        <div class="content">
+            <input class="input is-info is-small" id="fourth-workout" type="text" placeholder="workout 4">
+
+        </div>
+         </div>
+        </div>
+         
+        <div class="card cards">
+              <header class="card-header">
+            <p class="card-header-title" style="color: white;font-family:'Contrail One', cursive;">
+                 Fifth Workout
+             </p>
+        </header>
+         <div class="card-content">
+        <div class="content">
+            <input class="input is-info is-small" id="fifth-workout" type="text" placeholder="workout 5">
+
+        </div>
+         </div>
+        </div>
+
+        {{!-- <div>
             <h3 class="is-size-4 has-text-weight-semibold">Plan Name *</h3>
             <input class="input is-info is-small" id="plan-name" type="text" placeholder="Name Your Plan">
         </div>
@@ -56,8 +132,11 @@
         <div>
             <h3 class="is-size-4 has-text-weight-semibold">Fifth Workout</h3>
             <input class="input is-info is-small" id="fifth-workout" type="text" placeholder="Fifth Workout">
+        </div> --}}
         </div>
-        <button class="button is-black plan-create-form" type="submit" id="plan-create-form">Submit</button>
+        <div style="display:flex; justify-content:center">
+        <button class="button is-black plan-create-form" type="submit" id="plan-create-form" style="background-color:red; color:black;font-family:'Contrail One', cursive; margin-top: 2rem;">Submit</button>
+        </div>
     </form>
     <div class="has-text-centered">
         <p class="is-size-7">* Denotes a required field</p>
