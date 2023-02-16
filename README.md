@@ -29,6 +29,11 @@
 
   <img width="1510" alt="Screenshot 2023-02-15 at 10 47 21 AM" src="https://user-images.githubusercontent.com/119962472/219100808-a4e4ac1a-600d-4a97-bca0-3162ae877197.png">
 
+
+  ------- Click the link below to view the live app -----------
+
+  [https://fitness-4u.herokuapp.com/](url)
+
   
   
   ## Installation 
