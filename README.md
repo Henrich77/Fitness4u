@@ -32,7 +32,7 @@
 
   ------- Click the link below to view the live app -----------
 
-  [https://fitness-4u.herokuapp.com/](url)
+  https://fitness-4u.herokuapp.com/
 
   
   
